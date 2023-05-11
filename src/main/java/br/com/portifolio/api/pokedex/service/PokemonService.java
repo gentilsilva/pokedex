@@ -19,4 +19,8 @@ public class PokemonService {
         return pokemonRepository.findAll().stream().map(PokemonDTO::new).toList();
     }
 
+    @Transactional(readOnly = true)
+    public PokemonDTO consultarPokemonPorId(Long id) {
+        return new PokemonDTO(pokemonRepository.getReferenceById(id));
+    }
 }

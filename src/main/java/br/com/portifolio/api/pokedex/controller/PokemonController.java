@@ -5,6 +5,7 @@ import br.com.portifolio.api.pokedex.service.PokemonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,11 @@ public class PokemonController {
     @GetMapping
     public ResponseEntity<List<PokemonDTO>> consultarPokemons() {
         return ResponseEntity.ok(pokemonService.consultarPokemons());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PokemonDTO> consultarPokemonPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(pokemonService.consultarPokemonPorId(id));
     }
 
 }
