@@ -1,4 +1,4 @@
-INSERT INTO tb_pokemon (altura, nome, peso, url_imagem)
+/* INSERT INTO tb_pokemon (altura, nome, peso, url_imagem)
 VALUES
     (0.71, 'Bulbasaur', 6.9, 'https://exemplo.com/imagem_bulbasaur.png'),
     (0.99, 'Ivysaur', 13.0, 'https://exemplo.com/imagem_ivysaur.png'),
@@ -151,4 +151,25 @@ VALUES
     (4.01, 'Dragonite', 210.0, 'https://exemplo.com/imagem_dragonite.png'),
     (0.71, 'Mewtwo', 122.0, 'https://exemplo.com/imagem_mewtwo.png'),
     (0.41, 'Mew', 4.0, 'https://exemplo.com/imagem_mew.png');
+; */
+
+INSERT INTO tb_tipo (nome)
+VALUES
+    ('Normal'),
+    ('Lutador'),
+    ('Voador'),
+    ('Venenoso'),
+    ('Terrestre'),
+    ('Pedra'),
+    ('Inseto'),
+    ('Fantasma'),
+    ('Metalico'),
+    ('Fogo'),
+    ('Agua'),
+    ('Planta'),
+    ('Eletrico'),
+    ('Psiquico'),
+    ('Gelo'),
+    ('Dragao'),
+    ('Fada');
 ;
