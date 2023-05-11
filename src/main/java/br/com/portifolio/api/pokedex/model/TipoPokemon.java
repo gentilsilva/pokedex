@@ -2,23 +2,22 @@ package br.com.portifolio.api.pokedex.model;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
-@Entity(name = "Tipo")
-@Table(name = "tb_tipo")
+@Entity(name = "PokemonTipo")
+@Table(name = "tb_pokemon_tipo")
 @NoArgsConstructor
-@Getter
 @EqualsAndHashCode(of = "id")
-public class Tipo {
+public class TipoPokemon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    @ManyToOne
+    @JoinColumn(name = "pokemon_id")
+    private Pokemon idPokemon;
+    @ManyToOne
+    @JoinColumn(name = "tipo_id")
+    private Tipo idTipo;
 
-    @OneToMany(mappedBy = "idTipo")
-    private List<TipoPokemon> tipoPokemons;
 }

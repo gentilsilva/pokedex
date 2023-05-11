@@ -1,7 +1,6 @@
 package br.com.portifolio.api.pokedex.dto;
 
 import br.com.portifolio.api.pokedex.model.Pokemon;
-import br.com.portifolio.api.pokedex.repository.PokemonRepository;
 
 public record PokemonDTO(
         long id,

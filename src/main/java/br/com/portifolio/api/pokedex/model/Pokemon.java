@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity(name = "Pokemon")
 @Table(name = "tb_pokemon")
 @NoArgsConstructor
@@ -19,5 +21,8 @@ public class Pokemon {
     private Float altura;
     private Float peso;
     private String urlImagem;
+
+    @OneToMany(mappedBy = "idPokemon")
+    private List<TipoPokemon> tipoPokemons;
 
 }
